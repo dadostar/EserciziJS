@@ -57,7 +57,7 @@ var RandomPoint = function () {
 }
 
 
-var GeneraNpunti = function (n) {
+var generaNpunti = function (n) {
 	var res = [];
 	for (var a = 0; a < n ; a++) {
 		res.push(RandomPoint());
@@ -67,6 +67,9 @@ var GeneraNpunti = function (n) {
 	return res;
 	
 }
+
+
+
 
 
 
