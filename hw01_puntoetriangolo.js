@@ -1,7 +1,7 @@
 var Punto = function (x , y) {
 	
-	this.x = x;
-	this.y = y;
+	this.x = x || 0;
+	this.y = y || 0;
 	
 }
 
@@ -42,7 +42,22 @@ Punto.prototype.translate = function (dx,dy) {
 	this.x += dx;
 	this.y += dy;
 	
+	return this;
+	
 }
+
+var rand = function (minim,maxim) {
+	return minim + Math.random() * (maxim - minim);
+	
+}
+
+var RandomPoint = function () {
+	var p = new Punto(rand(-100,100),rand(-100,100));
+}
+
+
+
+
 
 
 
