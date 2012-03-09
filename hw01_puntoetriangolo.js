@@ -53,10 +53,20 @@ var rand = function (minim,maxim) {
 
 var RandomPoint = function () {
 	var p = new Punto(rand(-100,100),rand(-100,100));
+	return p ;
 }
 
 
-
+var GeneraNpunti = function (n) {
+	var res = [];
+	for (var a = 0; a < n ; a++) {
+		res.push(RandomPoint());
+		
+	}
+	
+	return res;
+	
+}
 
 
 
