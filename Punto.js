@@ -121,19 +121,19 @@ Punto.prototype.getDistance = function (x) {
 
 
 Triangolo.prototype.above = function (linea) {
-	ar = [this.p1, this.p2, this.p3];
+	var ar = [this.p1, this.p2, this.p3];
 	
 	return ar.every(function(el, ind, ar) { linea.getDistanceFromPoint(el) > 0; });
 }
 
 Triangolo.prototype.below = function (linea) {
-	ar = [this.p1, this.p2, this.p3];
+	var ar = [this.p1, this.p2, this.p3];
 	
 	return ar.every(function(el, ind, ar) { linea.getDistanceFromPoint(el) < 0; });
+
 }
 
 Triangolo.prototype.above = function (linea) {
-	ar = [this.p1, this.p2, this.p3];
 	
 	return !this.above(linea) && !this.below(linea);
 }
