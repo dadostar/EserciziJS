@@ -96,6 +96,16 @@ Punto.prototype.membership = function (f) {
 		
 }
 
+pow = Math.pow;
+sqrt = Math.sqrt;
+abs = Math.abs;
+
+Punto.prototype.distance = function (line) {
+	
+	return abs(line.a*this.x + line.b * this.y + line.c)/sqrt((pow(line.a,2) + pow(line.b,2)));
+	
+}
+
 
 
 
