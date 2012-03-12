@@ -5,7 +5,7 @@ var Punto = function (x , y) {
 	
 }
 
-Punto.prototype.getDistanza = function (p) {
+Punto.prototype.getDistanceFromPoint = function (p) {
 		
 		return Math.sqrt(Math.pow((p.x - this.x),2)+Math.pow((p.y - this.y),2));
 		
@@ -100,11 +100,24 @@ pow = Math.pow;
 sqrt = Math.sqrt;
 abs = Math.abs;
 
-Punto.prototype.distance = function (line) {
+Punto.prototype.getDistanceFromLine = function (line) {
 	
 	return abs(line.a*this.x + line.b * this.y + line.c)/sqrt((pow(line.a,2) + pow(line.b,2)));
 	
 }
+
+
+Punto.prototype.getDistance = function (x) {
+	if (x istanceof Punto) {
+		return this.getDistanceFromPoint(x);
+	}
+	
+	if (x istanceof Line) {
+		return this.getDistanceFromLine(x);
+	}
+	
+	throw new Error('x is not a Point nor a Line');
+};
 
 
 
