@@ -123,7 +123,7 @@ Punto.prototype.getDistance = function (x) {
 Triangolo.prototype.above = function (linea) {
 	ar = [this.p1, this.p2, this.p3];
 	
-	return ar.forEach(function(el, ind, ar) {return linea.getDistanceFromPoint(el) > 0; });
+	return ar.every(function(el, ind, ar) { linea.getDistanceFromPoint(el) > 0; });
 }
 
 
