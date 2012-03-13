@@ -133,7 +133,7 @@ Triangolo.prototype.below = function (linea) {
 
 }
 
-Triangolo.prototype.above = function (linea) {
+Triangolo.prototype.intersect = function (linea) {
 	
 	return !this.above(linea) && !this.below(linea);
 
@@ -146,6 +146,7 @@ var Quad = function (p1, p2, p3, p4) {
 
 Quad.prototype.above = Triangolo.prototype.above;
 Quad.prototype.below = Triangolo.prototype.below;
+
 
 
 
