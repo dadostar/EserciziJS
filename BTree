@@ -1,0 +1,5 @@
+var Nodo = function (x,y,n) {
+	var dx = x;
+	var sx = y;
+	var Nodo = n;
+}
