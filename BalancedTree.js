@@ -1,3 +1,7 @@
+
+
+
+
 var Node = function (x,y,l,c,r,f) {
 	this.dx = y;
 	this.sx = x;
