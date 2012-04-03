@@ -17,13 +17,13 @@ var parallelepipedo = function(l){
 }
 
 var sfera = function(l){
-	var dom = DOMAIN([[0,PI],[0,2*PI]]);
+	var dom = DOMAIN([[0,PI],[0,2*PI]])([4,4]);
 	var sfera = MAP(function(p){
-		var u = p[0]-PI/2;
-		var v = p[1]-PI;
-		return [Math.cos(u)*Math.cos(v)*l,Math.cos(u)*Math.sin(v)*l,Math.cos(u)*l];
+		var u = p[0]+PI/2;
+		var v = p[1]+PI;
+		return [Math.cos(u)*Math.cos(v)*l,Math.cos(u)*Math.sin(v)*l,Math.sin(u)*l];
 	})(dom);
-	COLOR([0,0,0])(sfera);
+	COLOR([1,0,0])(sfera);
 	DRAW(sfera);
 
 }
